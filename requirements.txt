@@ -1,0 +1,5 @@
+cx_Oracle
+Pillow
+Pandas
+python-dotenv
+schedule
