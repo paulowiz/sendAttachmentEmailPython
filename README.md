@@ -1,61 +1,98 @@
-﻿﻿## 📚  Descrição 
 
-RoboOCR foi criado com finalidade de ler os arquivos da pasta na rede \\fileserver01\Comprovantes que recebe todos os arquivos scaneados com o aplicativo OCR da SIMPRESS em formato TIF. Os arquivos reconhecidos são os comprovantes referente ao CTE - Conhecimento de Transporte e o RPA - Recibo de pagamento Autônomo.
+## 💌  Send Email with any kind of attachment from a folder 
 
-Foi colocado uma chave única em cada documento que será lido pelo OCR e renomeará o arquivo escaneado com aquela chave:
-Chave do CTE para os comprovantes do CTE:
+<img src="https://files.realpython.com/media/Sending-Emails-With-Python_Watermarked.6fee62c5f3b9.jpg" width = "600">
 
-```
-  31191286613403002094570000000677971477521214.tif
- ```
-Número do RPA, filial, empresa emitente e quantidade de paginas para o RPA:
 
-```
-  RPA-008239008-8-2000-2.tif
- ```  
-<p>O robô pelas chaves informadas acima localiza a viagem atrelada no documento e salva o arquivo scaneado na tabela DOCTOS_ANEXOS do SIT  no formato PDF. Sendo assim possível a visualização do anexo  pela quitação e CEDOC com mais eficiência e rapidez.</p>
+## 📚  Description
 
-<p>Validações realizadas pelo robô no arquivo scaneado:</p>
+   Monitoring a folder with this bot and when this folder would have a file, my bot will take this file and send it as email to a list of emails from a txt<br>
 
-- Consulta se existe viagem 
-- Consulta se existe comprovante já anexado e faz o update caso exista.
-- Verifica o tipo de arquivo anexado( espera-se o formato .TIF que é o padrão da impressora)
-- Verifica chave do arquivo se está correta
-- Pela chave identifica-se a empresa do documento direcionando automaticamente o banco que deve ser feita a ação (Transportes ,Logística ou Recintos) 
+## 🚀 Technologies have used 
 
-## 🚀 Tecnologias Usadas 
+<img src="https://user-images.githubusercontent.com/18649504/66262823-725cd600-e7be-11e9-9cea-ea14305079db.png" width = "100">
+<img src ="https://user-images.githubusercontent.com/18649504/66262944-91f4fe00-e7c0-11e9-979d-2f370d1ebbbc.png" width = "100">
 
-Python
+## Structure's Project 📌
 
-## 📌 Estrutura do Projeto 
     |-- controller
-         |--cte.py
-         |--email.py
-         |--functions.py
-         |--rpa.py
+         |--email.py
+         |--functions.py
+    |-- .env
     |-- database
-         |--conexao.py
-    |--  .env
-    |-- __init__.py
-    |-- requiriments.txt
-    |-- README.md
-## 📢 Como executar
+    |-- _init_.py
+    |-- listaEmails.txt
+    |-- requirements.txt
 
-Requisitos:
+## 🌏 Hosting
 
-Python 3.7.5<br>
+   Expa bot has been hosted on AWS Server by AIESEC in Brazil<br>
 
-Instalar todas as depedências do python usando o arquivo requiriments.txt que está no projeto:  
+## 📢 How to use
+
+Required:
+
+Python 3.7.5 or more<br>
+Node 10x<br>
+Tips about Linux's Environment:<br>
+Before everything you need to rum this command:
+```bash 
+sudo apt update
+```
+Install Python 3:
+```bash 
+sudo apt-get install python3
+```
+Install pip 3:
+```bash 
+sudo apt-get install python3-pip
+```
+Install Node:
+```bash 
+sudo apt install nodejs
+```
+Install npm:
+```bash 
+sudo apt install npm
+```
+Create specific tables in your database,executing script below:
+```bash 
+script_bd.sql
+```
+Install all python's dependencies with script below:  
 
 ```bash 
 pip install  -r requiriments.txt
+pip3 install  -r requiriments.txt(linux)
  ```  
- Executar o _main_.py no cmd com o comando:
+Install lib "pm2" on your node.js with NPM:
 
 ```bash 
-python _main_.py
- ```  
-Assim irá startar o robô
+npm install -g pm2
+```
+After every installations you can execute the bot,at directory's project with console CMD:  
+```bash 
+pm2  start  _init_.py
+```
+if your linux has other versions installed, you need to use:  
+```bash 
+pm2  start  _init_.py --interpreter python3
+```
+#TIPS PM2#
+
+List all bots:
+```bash 
+pm2  list
+```
+Stop a bot:
+```bash 
+pm2  stop _get_realized_.py
+```
+Show bot's log:
+```bash 
+pm2  logs _get_realized_.py
+```
+There are many commands on PM2 you can see at all in its documentation https://www.npmjs.com/package/pm2.
 
 ## 🔓 Licença 
 MIT © [Paulo Mota](https://www.linkedin.com/in/paulo-mota-955218a2/)
