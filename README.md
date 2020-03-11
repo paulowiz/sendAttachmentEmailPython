@@ -86,11 +86,11 @@ pm2  list
 ```
 Stop a bot:
 ```bash 
-pm2  stop _get_realized_.py
+pm2  stop _init_.py
 ```
 Show bot's log:
 ```bash 
-pm2  logs _get_realized_.py
+pm2  logs _init_.py
 ```
 There are many commands on PM2 you can see at all in its documentation https://www.npmjs.com/package/pm2.
 
