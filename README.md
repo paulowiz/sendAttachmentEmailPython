@@ -24,10 +24,6 @@
     |-- listaEmails.txt
     |-- requirements.txt
 
-## 🌏 Hosting
-
-   Expa bot has been hosted on AWS Server by AIESEC in Brazil<br>
-
 ## 📢 How to use
 
 Required:
