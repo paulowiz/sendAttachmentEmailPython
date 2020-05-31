@@ -1,8 +1,7 @@
 
 ## 💌  Send Email with any kind of attachment from a folder 
 
-<img src="https://files.realpython.com/media/Sending-Emails-With-Python_Watermarked.6fee62c5f3b9.jpg" width = "600">
-
+![email](https://user-images.githubusercontent.com/18649504/83364148-5e7d6a00-a375-11ea-94d9-0a063b5f8f4f.gif)
 
 ## 📚  Description
 
@@ -92,3 +91,4 @@ There are many commands on PM2 you can see at all in its documentation https://w
 
 ## 🔓 Licença 
 MIT © [Paulo Mota](https://www.linkedin.com/in/paulo-mota-955218a2/)
+
